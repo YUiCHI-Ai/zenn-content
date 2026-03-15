@@ -191,11 +191,6 @@ npx changeset version
 4. 内部依存パッケージのバージョン参照も更新する
 5. 消費したchangesetファイルを削除する
 
-:::message
-📖 パッケージマネージャの**仕組み**をさらに深く理解したい方へ
-**[『なぜnode_modulesは壊れるのか？』](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)**では、依存解決アルゴリズムの原理から3つのパッケージマネージャの設計思想の違いを図解で解説しています。
-:::
-
 ### 3. changeset publish：npmに公開する
 
 ```bash
@@ -516,6 +511,11 @@ Changesetsと並んでよく比較されるのが[semantic-release](https://gith
 - mainへのマージ即リリースのフローが合っている
 
 両ツールは「バージョン決定を人間が行うか、コミットメッセージから機械が行うか」という点で根本的に異なる。プロジェクトのリリースフローに合わせて選択すればよい。
+
+:::message
+📖 パッケージマネージャの**仕組み**をさらに深く理解したい方へ
+**[『なぜnode_modulesは壊れるのか？』](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)**では、依存解決アルゴリズムの原理から3つのパッケージマネージャの設計思想の違いを図解で解説しています。
+:::
 
 ## パッケージマネージャ別ワークスペース連携
 
