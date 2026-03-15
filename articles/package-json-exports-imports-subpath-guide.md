@@ -1,5 +1,5 @@
 ---
-title: "package.json exports完全ガイド：subpath exports / imports / conditional exportsを実務で使いこなす"
+title: "package.json exports/imports実践ガイド：subpath・条件付きexportsの設定パターン"
 emoji: "📤"
 type: "tech"
 topics: ["nodejs", "npm", "packagejson", "esm", "typescript"]
