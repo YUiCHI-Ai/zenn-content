@@ -1,0 +1,17 @@
+title: "Claude Code 実践テクニック集 ── AIペアプログラミングで開発速度を3倍にする"
+summary: "Claude Codeを使った実践的な開発テクニックを30個厳選。環境構築から高度なMCP活用まで、すぐに使える具体的なコマンドとワークフローを収録。"
+topics: ["claudecode", "ai", "programming", "productivity"]
+published: true
+price: 200
+toc_depth: 2
+chapters:
+  - "01-introduction"
+  - "02-setup"
+  - "03-file-operations"
+  - "04-code-review"
+  - "05-testing"
+  - "06-git-workflow"
+  - "07-refactoring"
+  - "08-debugging"
+  - "09-mcp-advanced"
+  - "10-real-world-workflows"

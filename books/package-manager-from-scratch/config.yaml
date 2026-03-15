@@ -1,0 +1,17 @@
+title: "なぜnode_modulesは壊れるのか？ ── npm/yarn/pnpmの依存解決を仕組みから完全理解する"
+summary: "npm installしたら動かない。lockfileのコンフリクトが解消できない。pnpmが速い理由が説明できない。──そんな「雰囲気で使っている」状態を脱却しませんか？本書では依存解決アルゴリズムの原理から、3つのパッケージマネージャの設計思想の違いを図解で完全理解します。"
+topics: ["npm", "pnpm", "nodejs", "yarn", "javascript"]
+published: true
+price: 500
+toc_depth: 2
+chapters:
+  - "01-what-is-package-manager"
+  - "02-npm-registry-protocol"
+  - "03-node-modules-structure"
+  - "04-lockfile-deep-dive"
+  - "05-yarn-classic-to-berry"
+  - "06-pnpm-architecture"
+  - "07-dependency-resolution"
+  - "08-monorepo-workspaces"
+  - "09-security-supply-chain"
+  - "10-future-and-practice"
