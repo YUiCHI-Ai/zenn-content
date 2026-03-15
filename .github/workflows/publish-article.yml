@@ -15,9 +15,24 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      - name: Check start date
+        id: datecheck
+        run: |
+          NOW=$(date -u +%Y%m%d)
+          # 2026-03-19 JST = 2026-03-18T15:00Z
+          # Use 2026-03-18 UTC as threshold to cover JST morning
+          if [ "$NOW" -lt "20260318" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Too early: $NOW (waiting until 2026-03-19 JST)"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.datecheck.outputs.skip == 'false'
 
       - name: Find and publish next article
+        if: steps.datecheck.outputs.skip == 'false'
         id: publish
         run: |
           ORDER=(
@@ -68,7 +83,7 @@ jobs:
           echo "All articles already published"
 
       - name: Commit and push
-        if: steps.publish.outputs.found == 'true'
+        if: steps.datecheck.outputs.skip == 'false' && steps.publish.outputs.found == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

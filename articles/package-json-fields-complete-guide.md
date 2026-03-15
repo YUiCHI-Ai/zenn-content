@@ -3,7 +3,7 @@ title: "package.jsonの全フィールド解説：main・exports・type・engine
 emoji: "📋"
 type: "tech"
 topics: ["npm", "nodejs", "javascript", "packagejson"]
-published: true
+published: false
 ---
 
 ## package.jsonは「なんとなく」で書いてはいけない
