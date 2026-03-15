@@ -212,11 +212,11 @@ bun update --interactive --recursive
 
 ## 4. bun.lockb から bun.lock への変遷
 
-Bunのlockfileは、v1.2を境に大きく変わりました。
+Bunのlockfileは、v1.2を境に大きく変わった。
 
 ### bun.lockb（v1.1以前） ── バイナリ形式
 
-Bun v1.1以前のlockfileは `bun.lockb` というバイナリ形式でした。パース速度を最優先した設計でしたが、以下の問題がありました。
+Bun v1.1以前のlockfileは `bun.lockb` というバイナリ形式だった。パース速度を最優先した設計だったが、以下の問題があった。
 
 - **git diffで差分が読めない**: バイナリファイルのためコードレビューで変更内容を確認できない
 - **手動での編集が不可能**: テキストエディタで開いても意味のある内容が表示されない
@@ -410,7 +410,7 @@ npm形式の `overrides` とYarn形式の `resolutions` の両方を認識する
 
 ### engines フィールド
 
-`package.json` の `engines` フィールドは読み取りますが、2026年3月時点ではデフォルトで制約の強制はしない。
+`package.json` の `engines` フィールドは読み取るが、2026年3月時点ではデフォルトで制約の強制はしない。
 
 ### その他の互換性
 
@@ -469,7 +469,7 @@ my-monorepo/
 
 ### フィルタリング
 
-特定のワークスペースだけインストールしたい場合は `--filter` を使いる。
+特定のワークスペースだけインストールしたい場合は `--filter` を使う。
 
 ```bash
 # pkg-a のみインストール
@@ -540,7 +540,7 @@ bun run --filter '@my-monorepo/api' test
 
 ### GitHub Actions での設定
 
-公式アクション [`oven-sh/setup-bun`](https://github.com/oven-sh/setup-bun) を使いる。
+公式アクション [`oven-sh/setup-bun`](https://github.com/oven-sh/setup-bun) を使う。
 
 ```yaml
 # .github/workflows/ci.yml
@@ -644,7 +644,7 @@ CMD ["bun", "run", "start"]
 
 ## 9. 現時点での制限事項・互換性の課題（2026年3月時点）
 
-Bunのパッケージマネージャは実用レベルに達していますが、以下の制限事項を認識しておく必要がある。
+Bunのパッケージマネージャは実用レベルに達しているが、以下の制限事項を認識しておく必要がある。
 
 ### ライフサイクルスクリプトのデフォルト無効
 
@@ -680,7 +680,7 @@ Yarn Berry（v2以降）の `yarn.lock`（v6形式以降）からの自動lockfi
 
 ### .npmrc の部分的な対応
 
-`.npmrc` の主要な設定（registry、auth token、scope設定）は読み取りますが、すべてのnpmrc設定項目に対応しているわけではない。Bun固有の設定は `bunfig.toml` で行いる。
+`.npmrc` の主要な設定（registry、auth token、scope設定）は読み取るが、すべてのnpmrc設定項目に対応しているわけではない。Bun固有の設定は `bunfig.toml` で行う。
 
 ### エコシステムの成熟度
 
