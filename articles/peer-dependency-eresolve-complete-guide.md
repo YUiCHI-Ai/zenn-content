@@ -3,7 +3,7 @@ title: "peer dependencyとは？ ERESOLVEエラーの原因と完全解決法【
 emoji: "🔗"
 type: "tech"
 topics: ["npm", "nodejs", "javascript", "frontend"]
-published: true
+published: false
 ---
 
 ## Reactを更新したら全部壊れた
@@ -447,5 +447,3 @@ npm workspacesのmonorepoでは、`overrides` はルートの `package.json` に
 この記事ではERESOLVEエラーの「解決方法」にフォーカスしました。しかし、peer dependencyがnpmの依存解決アルゴリズム内部でどのように処理されるのか、なぜv7で仕様が変わったのかを設計レベルで理解すると、エラーメッセージを見ただけで原因の見当がつくようになります。依存解決の内部動作を学びたい方は、拙著 **[「なぜnode_modulesは壊れるのか？」](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)** の第7章をご覧ください。
 
 ---
-
-*この記事はAIの支援を受けて執筆されています。*

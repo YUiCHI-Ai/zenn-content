@@ -3,7 +3,7 @@ title: "Verdaccio実践ガイド：プライベートnpmレジストリの構築
 emoji: "🏠"
 type: "tech"
 topics: ["verdaccio", "npm", "nodejs", "docker", "registry"]
-published: true
+published: false
 ---
 
 ## はじめに — なぜプライベートレジストリが必要か
@@ -1031,10 +1031,4 @@ echo "Backup saved to $BACKUP_DIR/storage.tar.gz"
 :::message
 📖 パッケージマネージャの**仕組み**をさらに深く理解したい方へ
 **[『なぜnode_modulesは壊れるのか？』](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)**では、依存解決アルゴリズムの原理から3つのパッケージマネージャの設計思想の違いを図解で解説している。
-:::
-
----
-
-:::message
-この記事はAI（Claude）による生成を含む。技術的な正確性については可能な限り検証しているが、最新情報は公式ドキュメントを確認してほしい。
 :::

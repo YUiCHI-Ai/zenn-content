@@ -283,5 +283,3 @@ flowchart TD
 各パッケージマネージャがなぜこのような設計になっているのか、依存解決アルゴリズムの原理から理解したい方は、[「なぜnode_modulesは壊れるのか？ ── npm/yarn/pnpmの依存解決を仕組みから完全理解する」](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)を参照してほしい。ホイスティングの功罪、Content-Addressable Storeの設計、PnPのモジュール解決の仕組みを、図解とコード例で解説している。
 
 ---
-
-*この記事はAIの支援を受けて執筆されています。*

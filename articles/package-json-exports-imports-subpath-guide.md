@@ -3,7 +3,7 @@ title: "package.json exports完全ガイド：subpath exports / imports / condit
 emoji: "📤"
 type: "tech"
 topics: ["nodejs", "npm", "packagejson", "esm", "typescript"]
-published: true
+published: false
 ---
 
 ## はじめに
@@ -1145,8 +1145,4 @@ node -e "const {createRequire} = require('module'); const r = createRequire(__fi
 :::message
 📖 パッケージマネージャの**仕組み**をさらに深く理解したい方へ
 **[『なぜnode_modulesは壊れるのか？』](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)**では、依存解決アルゴリズムの原理から3つのパッケージマネージャの設計思想の違いを図解で解説している。
-:::
-
-:::message
-この記事はAI（Claude）による生成を含む。技術的な正確性については可能な限り検証しているが、最新情報は公式ドキュメントを確認してほしい。
 :::

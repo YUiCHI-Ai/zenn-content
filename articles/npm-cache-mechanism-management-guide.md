@@ -3,7 +3,7 @@ title: "npm cacheの仕組みと管理：キャッシュクリアから高速化
 emoji: "📦"
 type: "tech"
 topics: ["npm", "nodejs", "pnpm", "yarn", "cicd"]
-published: true
+published: false
 ---
 
 ## はじめに
@@ -731,8 +731,4 @@ npm cache verify
 :::message
 📖 パッケージマネージャの**仕組み**をさらに深く理解したい方へ
 **[『なぜnode_modulesは壊れるのか？』](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)**では、依存解決アルゴリズムの原理から3つのパッケージマネージャの設計思想の違いを図解で解説しています。
-:::
-
-:::message
-この記事はAI（Claude）による生成を含みます。技術的な正確性については可能な限り検証していますが、最新情報は公式ドキュメントをご確認ください。
 :::

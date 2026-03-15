@@ -3,7 +3,7 @@ title: "Turborepoによるモノレポビルド最適化ガイド：キャッシ
 emoji: "🚀"
 type: "tech"
 topics: ["turborepo", "monorepo", "npm", "nodejs", "cicd"]
-published: true
+published: false
 ---
 
 ## モノレポのビルドが遅い、という現実
@@ -937,10 +937,4 @@ Turborepoの導入コストは低い。turbo.jsonの設定を書き、`turbo run
 :::message
 📘 **パッケージマネージャーの「なぜ」を体系的に学ぶなら**
 → [ゼロから理解するnpmパッケージマネージャー](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)
-:::
-
----
-
-:::message
-この記事はAIによって生成されました。技術的な正確性については十分に検証していますが、お気づきの点があればコメントでお知らせください。
 :::

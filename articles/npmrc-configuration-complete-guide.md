@@ -3,7 +3,7 @@ title: ".npmrc 設定完全ガイド ── プロジェクト・ユーザー・
 emoji: "⚙️"
 type: "tech"
 topics: ["npm", "nodejs", "javascript", "security"]
-published: true
+published: false
 ---
 
 ## 「チームメンバーの環境だけ挙動が違う」問題
@@ -553,5 +553,3 @@ fund=false
 この記事では.npmrcの「設定方法」にフォーカスしました。`ignore-scripts`や`min-release-age`がなぜ必要なのか、サプライチェーン攻撃の実際の攻撃ベクタとその防御策を体系的に理解したい方は、拙著 **[「なぜnode_modulesは壊れるのか？」](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)** の第9章をご覧ください。
 
 ---
-
-*この記事はAIの支援を受けて執筆されています。*

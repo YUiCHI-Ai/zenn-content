@@ -317,5 +317,3 @@ flowchart TD
 パッケージマネージャの内部構造を体系的に学びたい方は **[パッケージマネージャ from scratch](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)** をご覧ください。npm / yarn / pnpm の設計思想から依存解決、セキュリティまで10章構成で解説しています。1〜3章は無料です。
 
 ---
-
-*この記事はAIの支援を受けて執筆されています。*
