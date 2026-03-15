@@ -145,7 +145,7 @@ https://zenn.dev/yuichi_ai/books/package-manager-from-scratch
 
 ### 1. knipで未宣言の依存を検出する
 
-[knip](https://github.com/webpro/knip)は、プロジェクト内で使われているパッケージと`package.json`の宣言を比較し、不一致を報告するツールだ。未使用の依存・export・ファイルも検出できる。
+[knip](https://github.com/webpro-nl/knip)は、プロジェクト内で使われているパッケージと`package.json`の宣言を比較し、不一致を報告するツールだ。未使用の依存・export・ファイルも検出できる。
 
 :::message
 以前は`depcheck`が定番だったが、2025年にアーカイブされた。後継として`knip`への移行が推奨されている。

@@ -54,9 +54,9 @@ lockfile があれば、いつ・どのマシンで `npm install`（正確には
 
 ## package-lock.json の読み方
 
-### lockfileVersion 3（npm v7+）の構造
+### lockfileVersion 3（npm v9+）の構造
 
-現在の npm（v7以降）が生成する package-lock.json は lockfileVersion 3 です。実際のファイルを見てみましょう。
+現在の npm（v9以降）が生成する package-lock.json は lockfileVersion 3 です。npm v7-v8は lockfileVersion 2 をデフォルトで生成していました。実際のファイルを見てみましょう。
 
 ```json
 {

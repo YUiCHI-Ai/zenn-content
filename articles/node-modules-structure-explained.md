@@ -433,9 +433,6 @@ graph TB
 | node_modulesの構造 | フラット | 3層構造 |
 | バージョン競合の処理 | ネスト | .pnpm内で並列配置 |
 
-:::message
-この記事ではnode_modulesの構造を「読む」方法を解説しました。なぜnpmはフラット化するのか、pnpmのContent-Addressable Storeがどう機能するか、各パッケージマネージャの設計思想の違いは、書籍 [パッケージマネージャ from scratch](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch) の第3章と第6章で図解付きで詳しく解説しています。
-:::
 
 ## Phantom Dependency ── フラット化の副作用
 

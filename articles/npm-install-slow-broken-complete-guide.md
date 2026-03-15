@@ -83,7 +83,7 @@ npm dedupe
 npx knip
 ```
 
-[knip](https://github.com/webpro/knip) は `import` / `require` 文を静的解析して、コードから参照されていないパッケージや未使用のexportを検出します。
+[knip](https://github.com/webpro-nl/knip) は `import` / `require` 文を静的解析して、コードから参照されていないパッケージや未使用のexportを検出します。
 
 ### 5. lockfile と node_modules の不整合
 
