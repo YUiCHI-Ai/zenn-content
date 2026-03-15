@@ -47,7 +47,6 @@ provenanceは **SLSA（Supply-chain Levels for Software Artifacts）** フレー
 | Level 1 | ビルドプロセスの記録 | ✅ ビルド環境・トリガー情報を記録 |
 | Level 2 | ホスティングされたビルドサービス | ✅ GitHub Actions等のCI環境を要求 |
 | Level 3 | 改ざん防止されたビルド環境 | ❌ 別途slsa-github-generator等が必要 |
-| Level 4 | 二者レビュー | ❌ npm provenance単独ではカバーしない |
 
 ### Sigstore連携
 
@@ -230,8 +229,7 @@ yarn install --immutable
 いずれのコマンドも、lockfileに記録されたintegrityハッシュとダウンロードしたパッケージのハッシュが一致しない場合、エラーで停止する。
 
 :::message
-📖 パッケージマネージャの**仕組み**をさらに深く理解したい方へ
-**[『なぜnode_modulesは壊れるのか？』](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)**では、依存解決アルゴリズムの原理から3つのパッケージマネージャの設計思想の違いを図解で解説している。
+📖 lockfileのintegrityハッシュがパッケージの安全性を保証できるのは、依存解決の仕組みに基づいている。**なぜ**この仕組みが必要なのか、3つのパッケージマネージャの設計思想の違いから理解したい方は **[『なぜnode_modulesは壊れるのか？』](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)** を参照してほしい。
 :::
 
 ## 5. npm auditの活用
@@ -430,20 +428,20 @@ yarn install --immutable
 
 ### Bun環境での注意点
 
-Bun（v1.2時点）は`bun audit`コマンドを提供していない。Bunプロジェクトで脆弱性チェックを行うには、以下の回避策がある。
+Bun v1.2.15以降では`bun audit`コマンドが利用可能である。npmと同じレジストリAPIを使用して脆弱性を検出する。
 
 ```bash
-# 方法1: npxでnpm auditを実行（package-lock.jsonが必要）
-npx npm@latest audit
+# 脆弱性チェック
+bun audit
 
-# 方法2: Snyk CLIを使う
-snyk test
+# 重要度フィルタ
+bun audit --audit-level=high
 
-# 方法3: Socket CLIを使う
-socket scan .
+# 本番依存のみ
+bun audit --omit=dev
 ```
 
-Bunはlockfileが独自形式（Bun 1.2以降は`bun.lock`テキスト形式、旧バージョンは`bun.lockb`バイナリ形式）のため、`npm audit`を直接実行するには`package-lock.json`の生成が必要になる場合がある。
+v1.2.15より前のBunを使用している場合は、`npx npm@latest audit`（`package-lock.json`の生成が必要）またはSnyk/Socket CLIで代替する。
 
 ## 8. provenance対応のpublishワークフロー実践
 

@@ -223,11 +223,6 @@ config:recommended に含まれるプリセット:
 }
 ```
 
-:::message
-📖 パッケージマネージャの**仕組み**をさらに深く理解したい方へ
-**[『なぜnode_modulesは壊れるのか？』](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)**では、依存解決アルゴリズムの原理から3つのパッケージマネージャの設計思想の違いを図解で解説している。
-:::
-
 ---
 
 ## Dependabot vs Renovate 比較
@@ -271,6 +266,10 @@ config:recommended に含まれるプリセット:
 DependabotとRenovateの併用は推奨しない。同じ依存関係に対して重複したPRが生成され、混乱の原因になる。どちらか一方を選択し、統一すべきである。
 
 セキュリティアラートのみDependabot（GitHub標準の通知機能として）、バージョン更新はRenovateという組み合わせは成立する。その場合、Dependabotの`version updates`は無効にし、`security updates`のみ利用する。
+
+:::message
+📖 この記事ではRenovate/Dependabotの**設定方法（HOW）**を解説した。npm・pnpm・Yarnがなぜ異なる依存解決の仕組みを持つのか、その**設計思想の違い（WHY）**を知りたい方は **[『なぜnode_modulesは壊れるのか？』](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)** を参照してほしい。
+:::
 
 ---
 

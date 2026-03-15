@@ -293,13 +293,6 @@ packages:
 
 ---
 
-:::message
-📖 パッケージマネージャの**仕組み**をさらに深く理解したい方へ
-**[『なぜnode_modulesは壊れるのか？』](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)**では、依存解決アルゴリズムの原理から3つのパッケージマネージャの設計思想の違いを図解で解説している。
-:::
-
----
-
 ## パッケージのpublishと取得
 
 ### レジストリの指定方法
@@ -971,6 +964,10 @@ yarn npm publish
 | 環境変数展開 | `${VAR}` | `${VAR}` | 非対応 | `${VAR}` |
 
 > **注意**: yarn v1の`.npmrc`では環境変数展開（`${VAR}`）がサポートされていない。CI環境ではスクリプトで`.npmrc`を動的に生成する必要がある。
+
+:::message
+📖 npm/pnpm/yarnでレジストリ設定が異なるのは、各パッケージマネージャの**依存解決の設計思想**が根本的に異なるためである。その違いを原理から理解したい方は **[『なぜnode_modulesは壊れるのか？』](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)** で図解で解説している。
+:::
 
 ---
 

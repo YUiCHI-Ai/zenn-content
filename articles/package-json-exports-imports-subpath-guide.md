@@ -20,11 +20,6 @@ Node.jsのパッケージを公開・利用する上で、`package.json`の`expo
 
 本記事では、`exports`・`imports`・subpath patternsの**具体的な設定方法**にフォーカスし、実務でそのまま使えるパターンを網羅する。モジュールシステムがなぜ複雑になったのか、という設計思想・歴史的経緯についてはここでは扱わない。
 
-:::message
-📖 パッケージマネージャの**仕組み**をさらに深く理解したい方へ
-**[『なぜnode_modulesは壊れるのか？』](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)**では、依存解決アルゴリズムの原理から3つのパッケージマネージャの設計思想の違いを図解で解説している。
-:::
-
 ## exportsの基本
 
 ### mainフィールドとの違い
@@ -1006,6 +1001,10 @@ module.exports = new Promise((resolve) => {
 ```
 
 もしくは、ステートを持たないユーティリティ関数のみの場合はこの問題は発生しないため、気にしなくてよい。
+
+:::message
+📖 exportsの複雑さの根底にあるのは、CJSとESMという2つのモジュールシステムの**設計思想の衝突**である。この衝突がなぜ起きたのか、依存解決の原理から理解したい方は **[『なぜnode_modulesは壊れるのか？』](https://zenn.dev/yuichi_ai/books/package-manager-from-scratch)** で図解で解説している。
+:::
 
 ### ワイルドカードパターンがマッチしない
 
