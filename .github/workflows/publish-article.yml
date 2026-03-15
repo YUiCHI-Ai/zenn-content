@@ -1,0 +1,77 @@
+name: Publish Zenn Article
+
+on:
+  schedule:
+    # JST 朝8:03 / 昼12:07 / 晩20:03 (UTC: -9h)
+    - cron: '3 23 * * *'   # JST 08:03
+    - cron: '7 3 * * *'    # JST 12:07
+    - cron: '3 11 * * *'   # JST 20:03
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Find and publish next article
+        id: publish
+        run: |
+          ORDER=(
+            "package-json-fields-complete-guide"
+            "npm-scripts-complete-guide"
+            "npm-publish-guide-2026"
+            "package-lock-json-complete-guide"
+            "dev-dependencies-complete-guide"
+            "npm-ci-vs-install-complete-guide"
+            "node-modules-structure-explained"
+            "semver-caret-tilde-version-pinning-guide"
+            "peer-dependency-eresolve-complete-guide"
+            "npmrc-configuration-complete-guide"
+            "npx-mechanism-and-alternatives-guide"
+            "npm-overrides-resolutions-guide"
+            "npm-workspaces-monorepo-intro"
+            "npm-to-pnpm-migration-guide-2026"
+            "nodejs-cjs-esm-module-system-guide"
+            "yarn-berry-pnp-zero-installs-guide"
+            "nodejs-version-manager-nvm-fnm-volta-comparison"
+            "docker-nodejs-npm-optimization-guide"
+            "turborepo-monorepo-build-guide"
+            "npm-deprecate-unpublish-package-management"
+            "npm-link-local-package-development-guide"
+            "npm-cache-mechanism-management-guide"
+            "bun-install-package-manager-guide"
+            "corepack-nodejs-package-manager-guide"
+            "changesets-monorepo-versioning-guide"
+            "npm-provenance-supply-chain-security-guide"
+            "package-json-exports-imports-subpath-guide"
+            "renovate-dependabot-automated-dependency-guide"
+            "verdaccio-private-npm-registry-guide"
+            "dependency-cruiser-architecture-enforcement-guide"
+          )
+
+          for slug in "${ORDER[@]}"; do
+            file="articles/${slug}.md"
+            if grep -q "published: false" "$file" 2>/dev/null; then
+              sed -i 's/published: false/published: true/' "$file"
+              echo "slug=${slug}" >> "$GITHUB_OUTPUT"
+              echo "found=true" >> "$GITHUB_OUTPUT"
+              echo "Published: ${slug}"
+              exit 0
+            fi
+          done
+
+          echo "found=false" >> "$GITHUB_OUTPUT"
+          echo "All articles already published"
+
+      - name: Commit and push
+        if: steps.publish.outputs.found == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "articles/${{ steps.publish.outputs.slug }}.md"
+          git commit -m "publish: ${{ steps.publish.outputs.slug }}"
+          git push
