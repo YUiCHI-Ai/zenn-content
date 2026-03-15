@@ -68,7 +68,7 @@ bun install
 
 # 特定のパッケージをインストール（bun addと同等）
 bun install react
-bun install react@19.1.1    # バージョン指定
+bun install react@19.0.0    # バージョン指定
 bun install react@latest    # タグ指定
 ```
 
