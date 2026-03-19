@@ -3,7 +3,7 @@ title: "devDependenciesとdependenciesの違いを完全理解：判断基準・
 emoji: "🔍"
 type: "tech"
 topics: ["npm", "nodejs", "javascript", "packagejson"]
-published: false
+published: true
 ---
 
 ## `--save-dev` どっちに入れる？という永遠の疑問
