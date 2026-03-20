@@ -3,7 +3,7 @@ title: "peer dependencyとは？ ERESOLVEエラーの原因と完全解決法【
 emoji: "🔗"
 type: "tech"
 topics: ["npm", "nodejs", "javascript", "frontend"]
-published: false
+published: true
 ---
 
 ## Reactを更新したら全部壊れた
