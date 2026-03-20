@@ -3,7 +3,7 @@ title: "node_modulesの中身を読む：npmの依存ツリー構造を図解で
 emoji: "📂"
 type: "tech"
 topics: ["npm", "nodejs", "javascript", "pnpm"]
-published: false
+published: true
 ---
 
 ## はじめに ── node_modulesの中身、見たことありますか？
