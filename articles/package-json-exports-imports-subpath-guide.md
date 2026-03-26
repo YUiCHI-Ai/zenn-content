@@ -3,7 +3,7 @@ title: "package.json exports/imports実践ガイド：subpath・条件付きexpo
 emoji: "📤"
 type: "tech"
 topics: ["nodejs", "npm", "packagejson", "esm", "typescript"]
-published: false
+published: true
 ---
 
 ## はじめに
