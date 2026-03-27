@@ -3,7 +3,7 @@ title: "Verdaccio実践ガイド：プライベートnpmレジストリの構築
 emoji: "🏠"
 type: "tech"
 topics: ["verdaccio", "npm", "nodejs", "docker", "registry"]
-published: false
+published: true
 ---
 
 ## はじめに — なぜプライベートレジストリが必要か
