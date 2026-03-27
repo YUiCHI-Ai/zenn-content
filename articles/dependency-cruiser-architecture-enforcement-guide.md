@@ -3,7 +3,7 @@ title: "dependency-cruiser入門：依存関係の可視化とアーキテクチ
 emoji: "🕸️"
 type: "tech"
 topics: ["dependencycruiser", "nodejs", "architecture", "npm", "cicd"]
-published: false
+published: true
 ---
 
 ## はじめに
